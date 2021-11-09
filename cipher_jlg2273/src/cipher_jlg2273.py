@@ -9,13 +9,30 @@ def cipher(text, shift, encrypt=True):
         the alphabet. The cipher will output a string of text, either encrypted
         or decrypted. Non-alphabetical values will be ignored.
 
-            Typical usage example:
-            text = "apple"
-            shift = 1
-            encrypt=True
-            input = cipher("apple", 1)
-            output = "bqqmf"
+        Parameters
+        ----------
+        text: str
+           the string of text to encrypt or decrypt
+        shift: int
+            the number of steps to be taken by the cipher along the alphabet
+        encrypt: bool
+            True = encrypt; False = decrypt; defaults to True.
 
+
+        Returns
+        ------
+        str
+            the text, encrypted or decrypted.
+
+
+
+        Typical Usage Example
+        ---------------------
+        >>> from cipher_jlg2273 import cipher_jlg2273
+        >>> cipher(text = "apple", shift = 1, encrypt = True)
+        bqqmf
+        >>> cipher(text = "bqqmf", shift = 1, encrypy = False)
+        apple
     """
     alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     new_text = ''
